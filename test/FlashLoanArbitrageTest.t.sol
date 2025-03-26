@@ -121,7 +121,7 @@ contract FlashLoanArbitrageTest is Test {
     // 检查最终余额
     console.log("WETH balances:", weth.balanceOf(address(arbitrage)));
     console.log("TokenA balances:", tokenA.balanceOf(address(arbitrage)));
-    require(tokenA.balanceOf(address(arbitrage)) > 31 ether, "TokenA balance is not greater than 31 ether");
+    require(tokenA.balanceOf(address(arbitrage)) > profit, "TokenA balance is not greater than 31 ether");
     
   }
 }
