@@ -86,7 +86,7 @@ contract FlashLoanArbitrageTest is Test {
     }
 
     console.log("Arbitrage Analysis:");
-    console.log("- Borrow from Pool A:", amount / 1e18, "ETH");
+    console.log("- Borrow from Pool A:", amount / 1e18, "WETH");
     console.log("- Receive from Pool B:", tokenReceived / 1e18, "Token");
     console.log("- Repay to Pool A:", tokenToRepay / 1e18, "Token");
     console.log("- Expected profit:", profit / 1e18, "Token");
@@ -108,8 +108,8 @@ contract FlashLoanArbitrageTest is Test {
     (uint256 amount, uint256 profit) = calculateOptimalArbitrage();
     
     console.log("Arbitrage Analysis:");
-    console.log("- Optimal trade amount:", amount / 1e18, "ETH");
-    console.log("- Expected profit:", profit / 1e18, "ETH");
+    console.log("- Optimal trade amount:", amount / 1e18, "WETH");
+    console.log("- Expected profit:", profit / 1e18, "Token");
 
     if (profit > 0) {
         console.log("Executing arbitrage trade...");
@@ -121,7 +121,7 @@ contract FlashLoanArbitrageTest is Test {
     // 检查最终余额
     console.log("WETH balances:", weth.balanceOf(address(arbitrage)));
     console.log("TokenA balances:", tokenA.balanceOf(address(arbitrage)));
-    require(tokenA.balanceOf(address(arbitrage)) > profit, "TokenA balance is not greater than 31 ether");
+    require(tokenA.balanceOf(address(arbitrage)) >= profit, "TokenA balance is not greater than profit token");
     
   }
 }

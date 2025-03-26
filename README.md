@@ -12,7 +12,7 @@
 
 
 Ran 1 test for test/FlashLoanArbitrageTest.t.sol:FlashLoanArbitrageTest
-[PASS] testFlashLoanArbitrage() (gas: 252120)
+[PASS] testFlashLoanArbitrage() (gas: 252123)
 Logs:
   PoolA reserves: 1000000000000000000000 1000000000000000000000
   PoolB reserves: 500000000000000000000 1000000000000000000000
@@ -20,15 +20,15 @@ Logs:
   - Pool A (reserves): 1000 1000
   - Pool B (reserves): 500 1000
   Arbitrage Analysis:
-  - Borrow from Pool A: 205 ETH
+  - Borrow from Pool A: 205 WETH
   - Receive from Pool B: 290 Token
   - Repay to Pool A: 259 Token
   - Expected profit: 31 Token
   Arbitrage Analysis:
-  - Optimal trade amount: 205 ETH
-  - Expected profit: 31 ETH
+  - Optimal trade amount: 205 WETH
+  - Expected profit: 31 Token
   Executing arbitrage trade...
   WETH balances: 0
   TokenA balances: 31171458077754015461
 
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 2.74ms (657.79µs CPU time)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 2.88ms (671.21µs CPU time)
